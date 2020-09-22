@@ -4,32 +4,39 @@
 <body bgcolor="yellow">
     <script>
     //Thymo Hennekam, Software Developer, Da Vinci College Dordrecht
-            alert("Welkom bij mijn kaasservice. Hierbij help ik uw vragen beantwoorden om zodat u weet wat voor kaas u heeft. Heeft u de kaas bij de hand? Want dan komen hier de vragen. Beantwoord alle vragen met 'ja' of 'nee', in kleine letters."); //simpele popup die een vraag stelt
+            alert("Welkom bij mijn kaasservice. Hierbij help ik uw vragen beantwoorden om zodat u weet wat voor kaas u heeft. Heeft u de kaas bij de hand? Want dan komen hier de vragen. Beantwoord alle vragen met 'ja' of 'nee'."); //simpele popup die een vraag stelt
 
             var GeelYN = prompt("Is de kaas geel?");
+            GeelYN = GeelYN.toLowerCase();
 
 
             if(GeelYN == "ja"){
                 var GatenYN = prompt("Zitten er gaten in?")
+                GatenYN = GatenYN.toLowerCase();
             }
             else if(GeelYN == "nee"){
                 var BlSchimmelsYN = prompt("Heeft de kaas blauwe schimmels?")
+                BlSchimmelsYN = BlSchimmelsYN.toLowerCase();
             }
 
 
             if(GatenYN == "ja"){
                 var DuurYN = prompt("Is de kaas belachelijk duur?")
+                DuurYN = DuurYN.toLowerCase();
             }
             else if(GatenYN == "nee") {
                 var HardYN = prompt("Is de kaas zo hard als steen?")
+                HardYN = HardYN.toLowerCase();
             }
 
 
             if (BlSchimmelsYN == "ja"){
                 var KorstYNY = prompt("Heeft de kaas een korst?")
+                KorstYNY = KorstYNY.toLowerCase();
             }
             else if (BlSchimmelsYN == "nee"){
                 var KorstYNN = prompt("Heeft de kaas een korst?")
+                KorstYNN = KorstYNN.toLowerCase();
             }
 
             if(DuurYN == "ja"){
