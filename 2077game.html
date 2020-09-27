@@ -1,0 +1,217 @@
+<html>
+<head>
+</head>
+<body bgcolor="black">
+    <script>
+    //Thymo Hennekam, Software Developer, Da Vinci College Dordrecht
+            alert("HEALTH BAR: ♥♥♥♥♥♥♥♥♥♥\n\nNight City, 2077: You awaken in a back alley behind a bar in the center of town. Because of a rediculous blackout of last night, you have no clue what your way back home is. Keep in mind: Night City is a dangerous place. Death lurks into each and every corner. Noticing your weapon holster being empty and thus having nothing to defend yourself, this could be more problematic than ever.\n \nOBJECTIVE: Find Your Way Back Home\n \nDo you go to the left or to the right?"); //simpele popup die een vraag stelt
+
+            var pistool = false;
+
+            var StartLR = prompt("Do you exit the alley from the left or from the right side? Insert 'left' or 'right'.");
+            StartLR = StartLR.toLowerCase();
+
+
+            if(StartLR== "left"){
+                alert("You exit the alley from the left side. There, you notice a sign you remember seeing before. It's the one next to the highway you drive over several times a week. Looking around, you don't see your car anywhere. You have two options: take the risk to cross the highway on foot, or get back in the bar to ask someone wether they've seen you arrive with a car or not.")
+                var CrossBar = prompt("Do you cross the highway, or do you enter the bar? Insert 'cross highway' or 'enter bar'.")
+                CrossBar = CrossBar.toLowerCase();
+            }
+            else if(StartLR == "right"){
+                alert("You exit the alley from the right side. This might not have been the brightest idea, as you already see some suspicious people walking around there. After all, going in that direction, the alley only gets darker. Anyone there can have a gun or knife equipped. You take the risk anyway and keep on walking. You quicken your pace just to be sure. You notice some people in hoodies and bandanas staring, but not responding to your behavior. Do you take the risk to pickpocket one of those strangers to get a gun, or do you keep moving?")
+                var PickMoving = prompt("Do you pickpocket a stranger or keep moving? Insert 'pickpocket' or 'keep moving'.")
+                PickMoving = PickMoving.toLowerCase();
+            }
+
+
+            
+
+            //=========={RIGHT SIDE STORY}==========
+
+            if(PickMoving == "pickpocket"){
+                alert("Surprisingly, you manage to pickpocket one of the strangers without consequences and them noticing, and got a gun with a surpressor.")
+                alert("You obtained the PLL-70 Machine Pistol!")
+                var pistool = true;
+                alert("You exit the alley to get into probably more dangerous territory: an entire gang hangs out there, most likely armed to the brink. About 20 of them, you assume. You walk through their crowd without much of a problem besides a few stares. However, you notice one of the gang member has something in his back pocket: your car keys! You shout at him to get it back, totally ignoring that all gang members are most likely armed, and there's a lot of them. All gang members point their guns at you right away, as the gang member gives you two options: 'walk away from this and you won't get hurt, or we'll smoke you like the rest of your kind... Netrunner.")
+                var WalkFight = prompt("Do you walk away from the gang or do you insist into getting your keys? Insert 'walk away' or 'insist' [NOTE: PLL-70 Machine Pistol equipped]")
+                WalkFight = WalkFight.toLowerCase();
+
+            }
+            else if(PickMoving == "keep moving"){
+                alert("You exit the alley to get into probably more dangerous territory: an entire gang hangs out there, most likely armed to the brink. About 20 of them, you assume. You walk through their crowd without much of a problem besides a few stares. However, you notice one of the gang member has something in his back pocket: your car keys! You shout at him to get it back, totally ignoring that all gang members are most likely armed, and there's a lot of them. All gang members point their guns at you right away, as the gang member gives you two options: 'walk away from this and you won't get hurt, or we'll smoke you like the rest of your kind... Netrunner.")
+                 
+                 var WalkFight = prompt("Do you walk away from the gang or do you insist into getting your keys? Insert 'walk away' or 'insist'.")
+                 WalkFight = WalkFight.toLowerCase();
+            }
+
+            if(WalkFight == "insist") {if(pistool == true)
+                {alert("Because of the pistol you stole earlier, you manage to defend yourself. Within one quick volley of shots, you manage to already take down five gang members, including the one that had your car keys, and take cover. Looking at the display on the pistol, you notice you have only three bullets left, far from enough to take out the rest of the gang. Do you switch to mantis blades to take out the rest, or try to make the best out of the three remaining bullets?")
+                var MantisBullets = prompt("Do you switch to mantis blades or use your three bullets? Insert 'mantis blades' or 'use bullets'.")}
+                else {alert("Since you already lost your gun and never got one in the meantime, this wasn't a good idea. As you still approach the gang member with a menacing look, you get shot in the back 20 times in a row, causing you to bleed out instantly. \n\nGAME OVER")}
+                    //if statement die checkt of je pistool hebt, zoja scenario1, zo niet (else) scenario2
+            }
+
+            else if(WalkFight == "walk away"){
+                alert("You walk away, a bit disappointed you can't get the keys for your car. Guess you gotta get another way to get back home. On foot, or try the nearest metro station, maybe. Having taken a quick glance at your own car keys, you noticed your home adress marked on it, so you know where to go finally. Estimating how long it takes, it'd be 100 minutes on foot, or 20 minutes using the metro.")
+                var WalkMetro = prompt("Do you walk your way home or use the metro? Insert 'walk' or 'metro'.")
+                WalkMetro = WalkMetro.toLowerCase();
+            }
+
+            if(MantisBullets == "mantis blades") {
+                alert("HEALTH BAR: ♥♥♥♥♥♥♥♥♡♡\n\nYou throw your pistol towards one of the gang members to see if you can knock them unconscious with it. Apparently, you hit nobody. After that, you make a quick motion backwards with both arms to whip out the mantis blades that are right on your wrists. You get out of cover and lunge forward, making swiping motions to block some incoming bullets. Unfortunately, two manage to hit you, one in the hip and one in the foot. With high agility, you manage to slice through three gang members in barely a second. Lastly, after taking cover again, you pierce through the skull of another gang member. Noticing your success in defeating the gang, the rest decides to flee. Do you go behind the remaining gang members or just grab what you came for, your keys, and leave?")
+                var GangLeave = prompt("Do you go behind the remaining game members, or just leave with your keys? Insert 'chase fleers' or 'grab keys'.")
+                GangLeave = GangLeave.toLowerCase();
+            }
+            else if(MantisBullets == "use bullets"){
+                alert("You use your last remaining three bullets, of which two unfortunately miss. With the last one, you manage to land a headshot on one gang member, but that's far from enough. You look around to see what you can do: climb over the nearest wall and get out of this area without your keys, or take the risk to still grab your car keys that lie on the other side of this battlefield.")
+                var ClimbKeys = prompt("Do you get out of the area or take the risk and grab your keys? Insert 'escape' or 'grab keys'.")
+                ClimbKeys = ClimbKeys.toLowerCase();
+            }
+
+            if(WalkMetro == "walk"){
+                alert("You decided to walk your way home, even though it's a big distance. Keeping in mind this city isn't safe to begin with, this is a high risk choice. After walking for about ten minutes in the general direction of your home, you get another encounter... it's your friend, Jackie! 'What are you doing around here?', he asks. How do you respond?")
+                var Jackie1 = prompt("'What are you doing around here?'\n How do you reply? Insert 'going home' or 'none of your business'.")
+                Jackie1 = Jackie1.toLowerCase();
+            }
+            else if(WalkMetro == "metro"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou walk down the stairs of the nearest metro station. You already get an unsettling feeling in there, but in this city it's not a big surprise. As you get in the metro, the worst possible thing happens: a remote bomb was planted on the train beforehand, hence why you hear a ticking noise. Fearing the worst, the last thing you hear is a loud explosion and a lot of screaming, as you get caught in the blast yourself, your inner organs burning right away, causing a quick and unpeaceful death. \n\nGAME OVER")
+            }
+
+            if(GangLeave == "chase fleers"){
+                alert("You chase the last remaining gang members. Not a bad move, since they can report what you caused to gang members in other parts of the city, and pursue you for it. They don't look around and just run. Because of your own extra parkour skills and being able to semi-wallrun with the mantis blades, you catch up with them with ease. One by one, they all drop to the floor. You return to the spot where you defeated the gang at first and grab your car keys. Using the adress on the keychain, you enter it in your GPS and drive home peacefully after finding your car with the same GPS tracking on the keychain, with nothing to worry about. Maybe get another gun, but... knowing everyone here is armed, it can be obtained with ease any day.\n\nMISSION COMPLETE\nENDING: HUNT OR BE HUNTED")
+            }
+
+            else if(GangLeave == "grab keys"){
+                alert("You decide to just go for what you came for: your keys. You grab them, and with the GPS tracker on the keychain, you get to your car. You drive your way home in peace, happy to finally be in safety.")
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nHowever, since you didn't kill the rest of the gang, they alerted the gang members from other areas on the city. Since your license plate was also on the keychain, they manage to track you down. As you sleep in your bed next night, you get stabbed right in the heart and the brain, dying in your sleep. \n\nGAME OVER")
+            }
+            //v MOET HETZELFDE PAD KRIJGEN ALS JE WALKFIGHT == WALK AWAY KIEST v
+            if(ClimbKeys == "escape"){
+                alert("You walk away, a bit disappointed you can't get the keys for your car. Guess you gotta get another way to get back home. On foot, or try the nearest metro station, maybe. Having taken a quick glance at your own car keys, you noticed your home adress marked on it, so you know where to go finally. Estimating how long it takes, it'd be 100 minutes on foot, or 20 minutes using the metro.")
+                var WalkMetro = prompt("Do you walk your way home or use the metro? Insert 'walk' or 'metro'.")
+                WalkMetro = WalkMetro.toLowerCase();
+                if(WalkMetro == "metro"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou walk down the stairs of the nearest metro station. You already get an unsettling feeling in there, but in this city it's not a big surprise. As you get in the metro, the worst possible thing happens: a remote bomb was planted on the train beforehand, hence why you hear a ticking noise. Fearing the worst, the last thing you hear is a loud explosion and a lot of screaming, as you get caught in the blast yourself, your inner organs burning right away, causing a quick and unpeaceful death. \n\nGAME OVER")}
+
+                else if(WalkMetro == "walk"){
+                alert("You decided to walk your way home, even though it's a big distance. Keeping in mind this city isn't safe to begin with, this is a high risk choice. After walking for about ten minutes in the general direction of your home, you get another encounter... it's your friend, Jackie! 'What are you doing around here?', he asks. How do you respond?")
+                var Jackie1 = prompt("'What are you doing around here?'\n How do you reply? Insert 'going home' or 'none of your business'.")
+                Jackie1 = Jackie1.toLowerCase();}
+
+
+            }
+
+            else if(ClimbKeys == "grab keys"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nAs expected, this wasn't the brighest idea. You use your desperation to get your keys to jump there right away, just to end up wide open, getting hit by about 30 bullets at the same time, dying nearly instantly\n\nGAME OVER")
+            }
+
+            if(Jackie1 == "going home"){
+                alert("'You should know it's not safe to walk home, let alone in this area. Heck, your place is on the other side of town! You know what, I'll take you there, how about that? My car's parked right around the corner.', Jackie replies. Happy to hear that, you follow Jackie to his car and hop in, taking a deep breath to finally be safe, on your way back home.\n\nMISSION COMPLETE\nENDING: FRIENDS WITH BENEFITS")
+            }
+            else if(Jackie1 == "none of your business"){
+                alert("'Hey now, that's not very nice. Just don't linger around this area for much longer, it'll be a death sentence!' he says, frustration audible in his voice. He walks away right after that, close to a safer, more dense area. Do you follow Jackie or do you keep walking straight home?")
+                var JackieFollow = prompt("Do you follow Jackie or do you keep walking home? Insert 'follow' or 'keep going'.")
+                JackieFollow = JackieFollow.toLowerCase();
+            }
+            //v MOET HETZELFDE PAD KRIJGEN ALS JE JACKIE1 == GOING HOME KIEST v
+            if(JackieFollow == "follow"){
+                 alert("'You should know it's not safe to walk home, let alone in this area. Heck, your place is on the other side of town! You know what, I'll take you there, how about that? My car's parked right around the corner.', Jackie replies. Happy to hear that, you follow Jackie to his car and hop in, taking a deep breath to finally be safe, on your way back home.\n\nMISSION COMPLETE\nENDING: FRIENDS WITH BENEFITS")
+            }
+
+            else if(JackieFollow == "keep going"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou probably should've stayed with Jackie. As you keep walking in a straight line back home, you unknowingly walk into strictly forbidden military territory that has the right to shoot on sight. Since you kept walking, you get a sniper bullet through the head with no way to respond, dying instantly.\n\nGAME OVER")
+            }
+
+            //=========={LEFT SIDE STORY}==========
+
+            if(CrossBar == "cross highway"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou take the absolutely genius risk to cross the highway on foot, not even keeping in mind it has 10 lanes on each side. To no surprise, when you take your first step on the highway, people already start honking. Managing to cross three lanes, a truck runs you over, causing an instant death.\n\nGAME OVER")
+            }
+            else if(CrossBar == "enter bar") {
+                alert("You go to the front entrance of the bar to enter it. There you see two people: the bartender, and an old man with a beard in the corner next to the window. Who do you ask for assistance?")
+                var BarOld = prompt("Do you ask the bartender or the old man for help? Insert 'bartender' or 'old man'.")
+                BarOld = BarOld.toLowerCase();
+            }
+
+            if(BarOld == "bartender"){
+                alert("'Oh, you're the one that came in here last night. I do remember you telling your address to me just to be sure, so I can give you that. Nonetheless, I think I've seen the same car parked just a bit away from here. But I think you have other concerns first. Like, where are your car keys? Probably stolen by some gang members that hang around nearby. Probably not recommended to mess with those. You know what... go to the car dealer a few blocks away from here and tell him the secret password 'CP191120' to get a free car from him. It's a friend of mine. No password, no car. Your choice.")
+                var DealerGang = prompt("Do you go to the car dealer, or do you go to the gang? Insert 'car dealer' or 'gang'.")
+            }
+            else if(BarOld == "old man"){
+                alert("Looks like the old man was sleeping with hit hat over his face. He won't help much. Let's go for the bartender then.")
+                alert("''Oh, you're the one that came in here last night. I do remember you telling your address to me just to be sure, so I can give you that. Nonetheless, I think I've seen the same car parked just a bit away from here. But I think you have other concerns first. Like, where are your car keys? Probably stolen by some gang members that hang around nearby. Probably not recommended to mess with those. You know what... go to the car dealer a few blocks away from here and tell him the secret password 'CP191120' to get a free car from him. It's a friend of mine. No password, no car. Your choice.")
+                var DealerGang = prompt("Do you go to the car dealer, or do you go to the gang? Insert 'car dealer' or 'gang'.")
+            }
+
+            if(DealerGang == "car dealer"){
+                alert("You decide to get another car from the car dealership a few blocks away. You get inside and notice the owner. You walk up to him, remembering the password the bartender gave to you. What do you say to the shop owner?")
+                var Dealership = prompt("Tell the owner the password the bartender gave to you.")
+
+
+
+                     //NOTE: ALLES HIERNA KON VEEL EFFICIËNTER GEDAAN WORDEN MET EEN FUNCTION, MAAR DAT HAD IK NOG NIET ONDER CONTROLE 
+            }
+            else if(DealerGang == "gang"){
+                alert("Without any weapons equipped yourself, you still decide to go to the gang in the vicinity. Once you get closer, you notice there's about 20 of them, all armed aswell. You notice one of the gang members does have the keys in question. That gang member walks up to you after you shout to him that he has what's yours. 'You better get out of here for your own good, Netrunner, or your life ends here and now.'")
+                 var WalkFight = prompt("Do you walk away from the gang or do you insist into getting your keys? Insert 'walk away' or 'insist'.")
+                 WalkFight = WalkFight.toLowerCase();
+            }
+
+            if(WalkFight == "insist") {
+                alert("Since you already lost your gun and never got one in the meantime, this wasn't a good idea. As you still approach the gang member with a menacing look, you get shot in the back 20 times in a row, causing you to bleed out instantly. \n\nGAME OVER")
+
+            }
+
+            else if(WalkFight == "walk away"){
+                alert("You walk away, a bit disappointed you can't get the keys for your car. Guess you gotta get another way to get back home. On foot, or try the nearest metro station, maybe. Having taken a quick glance at your own car keys, you noticed your home adress marked on it, so you know where to go finally. Estimating how long it takes, it'd be 100 minutes on foot, or 20 minutes using the metro.")
+                var WalkMetro = prompt("Do you walk your way home or use the metro? Insert 'walk' or 'metro'.")
+                WalkMetro = WalkMetro.toLowerCase();
+            }
+
+
+            if(WalkMetro == "walk"){
+                alert("You decided to walk your way home, even though it's a big distance. Keeping in mind this city isn't safe to begin with, this is a high risk choice. After walking for about ten minutes in the general direction of your home, you get another encounter... it's your friend, Jackie! 'What are you doing around here?', he asks. How do you respond?")
+                var Jackie1 = prompt("'What are you doing around here?'\n How do you reply? Insert 'going home' or 'none of your business'.")
+                Jackie1 = Jackie1.toLowerCase();
+            }
+            else if(WalkMetro == "metro"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou walk down the stairs of the nearest metro station. You already get an unsettling feeling in there, but in this city it's not a big surprise. As you get in the metro, the worst possible thing happens: a remote bomb was planted on the train beforehand, hence why you hear a ticking noise. Fearing the worst, the last thing you hear is a loud explosion and a lot of screaming, as you get caught in the blast yourself, your inner organs burning right away, causing a quick and unpeaceful death. \n\nGAME OVER")
+            }
+
+            if(Jackie1 == "going home"){
+                alert("'You should know it's not safe to walk home, let alone in this area. Heck, your place is on the other side of town! You know what, I'll take you there, how about that? My car's parked right around the corner.', Jackie replies. Happy to hear that, you follow Jackie to his car and hop in, taking a deep breath to finally be safe, on your way back home.\n\nMISSION COMPLETE\nENDING: FRIENDS WITH BENEFITS")
+            }
+            else if(Jackie1 == "none of your business"){
+                alert("'Hey now, that's not very nice. Just don't linger around this area for much longer, it'll be a death sentence!' he says, frustration audible in his voice. He walks away right after that, close to a safer, more dense area. Do you follow Jackie or do you keep walking straight home?")
+                var JackieFollow = prompt("Do you follow Jackie or do you keep walking home? Insert 'follow' or 'keep going'.")
+                JackieFollow = JackieFollow.toLowerCase();
+            }
+
+            if(JackieFollow == "follow"){
+                 alert("'You should know it's not safe to walk home, let alone in this area. Heck, your place is on the other side of town! You know what, I'll take you there, how about that? My car's parked right around the corner.', Jackie replies. Happy to hear that, you follow Jackie to his car and hop in, taking a deep breath to finally be safe, on your way back home.\n\nMISSION COMPLETE\nENDING: FRIENDS WITH BENEFITS")
+            }
+
+            else if(JackieFollow == "keep going"){
+                alert("HEALTH BAR: ♡♡♡♡♡♡♡♡♡♡\n\nYou probably should've stayed with Jackie. As you keep walking in a straight line back home, you unknowingly walk into strictly forbidden military territory that has the right to shoot on sight. Since you kept walking, you get a sniper bullet through the head with no way to respond, dying instantly.\n\nGAME OVER")
+            }
+
+          
+
+            if(Dealership == "CP191120"){
+                alert("'Ah, so you're one of those guys from Shawn, that bartender a few blocks away from here.', the owner says, 'Alright, alright, I know who I'm dealing with. Pick a car and get outta here. We do this as if we never met, and that this car is stolen.'")
+                alert("With that, you grab a car and get the keys from the owner. You start the ride home, entering the address from the info the bartender gave to you. You drive home, with nothing to worry about, and a better car on top of that!\n\nMISSION COMPLETE\nENDING: PEACEWALKER")
+            }
+            else {
+                alert("'What the hell are you talking about? Get outta here!', the owner shouts. You go outside, sighing. No car, no way home safely, no contact with others. You sit in a corner of a building, losing hope. You enter a big state of depression that you find no way out, except...\n\nGAME OVER")
+                }
+
+
+
+
+
+
+            
+    </script>
+            }
+</body>
+</html>
